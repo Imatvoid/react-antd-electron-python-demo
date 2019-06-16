@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import {Layout, Menu, Icon} from 'antd';
 import './App.css';
 
@@ -14,25 +14,23 @@ class App extends React.Component {
     };
 
 
-    onCollapse = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        });
+    onCollapse = (collapsed: any) => {
+        console.log(collapsed);
+        this.setState({collapsed});
     };
 
     render() {
 
         return (
-            <Layout style={{minHeight: '100vh'}}>
-                <Sider
-                    style={{
-                        //overflow: 'auto',
-                        //height: '100vh',
-                        //position: 'fixed',
-                        //left: 0,
-                    }}
-                    trigger={null} collapsible collapsed={this.state.collapsed}
-                >
+            <Layout>
+                <Sider style={{
+                    overflow: 'auto',
+                    height: '100vh',
+                    position: 'fixed',
+                    left: 0,
+                }}
+                       collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
+
                     <div className="logo"/>
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
                         <Menu.Item key="1">
@@ -51,6 +49,8 @@ class App extends React.Component {
                             <Menu.Item key="111">Tom</Menu.Item>
                             <Menu.Item key="411">Bill</Menu.Item>
                             <Menu.Item key="511">Alex</Menu.Item>
+                            <Menu.Item key="512">Alex</Menu.Item>
+                            <Menu.Item key="513">Alex</Menu.Item>
                         </SubMenu>
                         <Menu.Item key="3">
                             <Icon type="upload"/>
@@ -78,13 +78,9 @@ class App extends React.Component {
                         </Menu.Item>
                     </Menu>
                 </Sider>
-                <Layout>
+                <Layout style={{marginLeft: 200}}>
                     <Header style={{background: '#fff', padding: 0}}>
-                        <Icon
-                            className="trigger"
-                            type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                            onClick={this.onCollapse}
-                        />
+                        <h3>1</h3>
                     </Header>
 
 
@@ -104,6 +100,14 @@ class App extends React.Component {
                             <br/>
                             ...
                             <br/>
+
+                            ...
+                            <br/>
+                            ...
+                            <br/>
+                            ...
+                            <br/>
+
                             ...
                             <br/>
                             ...
@@ -146,41 +150,7 @@ class App extends React.Component {
                             <br/>
                             ...
                             <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
-                            <br/>
-                            ...
+
                             <br/>
                             ...
                             <br/>
