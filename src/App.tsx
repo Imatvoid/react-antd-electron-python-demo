@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import './App.css';
-// import Electron from 'electron';
-// const { dialog } = Electron.remote;
+import Electron from 'electron';
+//const { dialog } = Electron.remote;
 //
 // //渲染进程可以通过`ipcRenderer`向主进程发送消息。
-// // const fs = Electron.remote.require('fs');
-// const ipcRenderer  = Electron.ipcRenderer;
+// const fs = Electron.remote.require('fs');
+const ipcRenderer  = Electron.ipcRenderer;
 
 class App extends Component {
     render() {
@@ -27,7 +27,7 @@ class App extends Component {
         //     console.log(filePaths);
         // });
         console.log(123);
-        //ipcRenderer.send('chooseFolder');
+        ipcRenderer.send('chooseFolder');
     }
 }
 

@@ -4,12 +4,12 @@ const CracoAntDesignPlugin = require("craco-antd");
 
 module.exports = {
     plugins: [{plugin: CracoAntDesignPlugin}],
-    // webpack: {
-    //     configure: {
-    //         target: 'electron-renderer'
-    //     },
-    //
-    // },
+    webpack: {
+        configure: {
+            target: 'electron-renderer'
+        },
+
+    },
 
 
 };
