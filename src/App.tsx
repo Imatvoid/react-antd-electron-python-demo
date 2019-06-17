@@ -10,11 +10,7 @@ const process = require('process');
 console.log(require);
 
 
-// declare global {
-//     interface Window {
-//         require: any;
-//     }
-// }
+
 const electron = require('electron');
 console.log(electron);
 
