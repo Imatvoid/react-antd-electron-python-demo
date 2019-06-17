@@ -6,8 +6,9 @@ module.exports = {
     plugins: [{plugin: CracoAntDesignPlugin}],
     webpack: {
         configure: {
-            target: 'electron-renderer'
+            target: 'electron-renderer',
         },
+
 
     },
 
