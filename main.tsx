@@ -103,8 +103,14 @@ const createPyProc = () => {
         pyProc = require('child_process').execFile(script, [port])
     } else {
         console.log('no pack');
-        //pyProc = require('child_process').spawn('/Users/yangxu/.conda/envs/py36/bin/python', [script, port])
-        pyProc = require('child_process').spawn('/home/atvoid/SoftWare/anaconda3/envs/py37/bin/python', [script, port])
+        // my mac
+        if('darwin' === platform) {
+            pyProc = require('child_process').spawn('/Users/yangxu/.conda/envs/py36/bin/python', [script, port])
+        }else{
+            // my linux
+            pyProc = require('child_process').spawn('/home/atvoid/SoftWare/anaconda3/envs/py37/bin/python', [script, port])
+        }
+
     }
 
     if (pyProc != null) {
