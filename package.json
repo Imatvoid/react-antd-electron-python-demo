@@ -3,6 +3,17 @@
   "name": "antd-ts-elec",
   "version": "0.1.0",
   "private": true,
+  "mac": {
+    "icon": "public/favicon.ico"
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "public/favicon.ico"
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "icon": "public/favicon.ico"
+  },
   "dependencies": {
     "@craco/craco": "^5.2.1",
     "@types/jest": "24.0.13",
