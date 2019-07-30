@@ -1,6 +1,6 @@
 {
   "main": "./main.tsx",
-  "name": "antd-ts-elec",
+  "name": "monitor",
   "version": "0.1.0",
   "private": true,
   "mac": {
@@ -29,7 +29,6 @@
     "react-scripts": "3.0.1",
     "typescript": "3.4.5",
     "wait-on": "^3.2.0",
-    "zeromq": "^5.1.0",
     "zerorpc": "^0.9.8"
   },
   "scripts": {
