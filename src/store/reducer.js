@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {AC_CALC} from "./actionCreation";
+import {AC_CALC, AC_HANDLE_ORDER_NO_CHANGE, AC_TRANS_ORDER_NO} from "./actionCreation";
 
 
 const process = require('process');
@@ -22,8 +22,28 @@ function calculatorResult(state = 0, action) {
 }
 
 
+const orderUtilState = {
+    no: "123",
+    dataBaseNo: "1" ,
+};
+function orderUtil(state = orderUtilState, action) {
+    if (action.type === AC_HANDLE_ORDER_NO_CHANGE) {
+        let newState = JSON.parse(JSON.stringify(state));
+        newState.no=action.data;
+        return newState;
+    }
+
+    if (action.type === AC_TRANS_ORDER_NO) {
+        let newState = JSON.parse(JSON.stringify(state));
+        newState.dataBaseNo=action.data;
+        return newState;
+    }
+    return state;
+}
+
 // 组合成一个 rootReducer
 export const rootReducer = combineReducers({
     env,
-    calculatorResult
+    calculatorResult,
+    orderUtil,
 });

@@ -4,6 +4,7 @@ import './App.css';
 import Calculator from "./pages/Calculator";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import orderUtils from "./pages/order/orderUtils";
 
 const {Header, Content, Footer, Sider} = Layout;
 const {SubMenu} = Menu;
@@ -23,28 +24,29 @@ function App() {
                 }}
                 >
                     <div className="logo"/>
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['2']}>
+                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1">
                             <Icon type="user"/>
-                            <span className="nav-text">nav 1</span>
+                            <span className="nav-text">综合面板</span>
+                            <Link to={{pathname: '/'}}/>
                         </Menu.Item>
                         <SubMenu
-                            key="sub1"
+                            key="order"
                             title={
                                 <span>
                                   <Icon type="user"/>
-                                  <span>User</span>
+                                  <span>订单相关</span>
                                 </span>
                             }
                         >
-                            <Menu.Item key="111">Tom</Menu.Item>
-                            <Menu.Item key="411">Bill</Menu.Item>
-                            <Menu.Item key="511">Alex</Menu.Item>
+                            <Menu.Item key="orderUtils">
+                                <span className="nav-text">常用工具</span>
+                                <Link to={{pathname: '/orderUtils'}}/>
+                            </Menu.Item>
                         </SubMenu>
                         <Menu.Item key="2">
                             <Icon type="user"/>
                             <span className="nav-text">Home</span>
-                            <Link to="/"/>
                         </Menu.Item>
                         <Menu.Item key="3">
                             <Icon type="upload"/>
@@ -79,6 +81,7 @@ function App() {
                     <Content style={{margin: '24px 16px 0', overflow: 'initial'}}>
                         <Route exact path="/" component={HomePage}/>
                         <Route exact path="/calculator" component={Calculator}/>
+                        <Route exact path="/orderUtils" component={orderUtils}/>
                     </Content>
                     <Footer style={{textAlign: 'center'}}>Ant Design ©2018 Created by Ant UED</Footer>
                 </Layout>
