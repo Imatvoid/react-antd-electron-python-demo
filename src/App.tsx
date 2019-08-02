@@ -8,22 +8,8 @@ import HomePage from "./pages/HomePage";
 const {Header, Content, Footer, Sider} = Layout;
 const {SubMenu} = Menu;
 
-const process = require('process');
-console.log(process);
-
-
 // const electron = require('electron');
 // console.log(electron);
-
-
-function calculatorData() {
-    console.log("calculatorData");
-    return ({
-        nodeVersion: process.versions.node,
-        chromeVersion: process.versions.chrome,
-        electronVersion: process.versions.electron
-    });
-}
 
 function App() {
     return (
@@ -63,7 +49,7 @@ function App() {
                         <Menu.Item key="3">
                             <Icon type="upload"/>
                             <span className="nav-text">Calculator</span>
-                            <Link to={{pathname: '/calculator',state: calculatorData()}}/>
+                            <Link to={{pathname: '/calculator'}}/>
                         </Menu.Item>
                         <Menu.Item key="4">
                             <Icon type="bar-chart"/>
