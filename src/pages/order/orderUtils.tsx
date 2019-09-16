@@ -1,5 +1,5 @@
 import React from "react";
-import {Descriptions, Icon, Input} from "antd";
+import {Card, Icon, Input} from "antd";
 import {getDatabaseNO, handleOrderNoChange} from "../../store/actionCreation";
 import {connect} from "react-redux";
 
@@ -18,7 +18,11 @@ function orderUtils(props: any) {
                                              onClick={() => props.onTransOrderClick(props.no)}/>}
                            onPressEnter={(e:any) => props.onTransOrderClick(e.target.value)}/>
                 </InputGroup>
-                <Descriptions title={props.dataBaseNo}/>
+                <br/>
+                <br/>
+                <Card style={{ width: 300 }}>
+                    <p>订单所在分库为: {props.dataBaseNo} 库</p>
+                </Card>
             </div>
         </div>
     );

@@ -23,8 +23,8 @@ function calculatorResult(state = 0, action) {
 
 
 const orderUtilState = {
-    no: "123",
-    dataBaseNo: "1" ,
+    no: "123456789444442",
+    dataBaseNo: "3" ,
 };
 function orderUtil(state = orderUtilState, action) {
     if (action.type === AC_HANDLE_ORDER_NO_CHANGE) {
