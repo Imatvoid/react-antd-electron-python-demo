@@ -44,16 +44,16 @@ start
 - [Create React App](https://github.com/facebook/create-react-app).      
   react app脚手架     
 
-- craco-antd(craco)
-  **C**reate **R**eact **A**pp **C**onfiguration **O**verride is an easy and comprehensible configuration layer for create-react-app.
-  解决CRA脚手架覆盖配置的问题.     
-  这是antd的集成版      
+- craco-antd(craco)     
+  **C**reate **R**eact **A**pp **C**onfiguration **O**verride is an easy and comprehensible configuration layer for create-react-app.       
+  解决CRA脚手架覆盖配置的问题.      
+  这是antd的集成版       
   https://github.com/sharegate/craco
 
-- antd(开源的前端组建库)
+- antd(蚂蚁开源的前端组件库)
 
 - zerorpc     
-  python的rpc通信库,基于zeromq。它同时支持python和nodejs             
+  python的rpc通信库,基于zeromq。它同时支持python和nodejs                   
   https://gist.github.com/ninehills/5804894
   
 
